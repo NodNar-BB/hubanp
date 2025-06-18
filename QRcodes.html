@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QRcodes</title>
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: #1e293b;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #334155;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0.5rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 1rem;
+      @media (max-width: 480px) {
+        main {
+          padding: 0.5rem;
+        }}
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    footer {
+      background: #1e293b;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .card {
+      background: #f1f5f9;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-left: 5px solid #0ea5e9;
+    }
+    .card img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Anatomy & Physiology Hub</h1>
+    <p>Welcome to the QR code section.</p>
+  </header>
+  
+  <nav>
+    <a href="#about">About</a>
+    <a href="learn.html">Learn</a>
+    <a href="resources.html">Resources</a>
+    <a href="#tools">Tools</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
+  <main>
+    <section id="resources">
+      <h2>QR codes</h2>
+      <div class="card">
+        <h3>Chest</h3>
+        <p></p>
+      
+        <!-- Thumbnail Image -->
+        <img src="QRheart.png" alt="QR heart" style="width: 200px; cursor: pointer;" onclick="openFullscreen(this.src)">
+      </div>
+        <!-- Fullscreen Overlay -->
+      <div id="fullscreen" 
+        style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:black; justify-content:center; align-items:center; z-index:9999;" 
+        onclick="closeFullscreen()">
+        <img id="fullscreenImg" src="QRheart.png" style="max-width:100%; max-height:100%;">
+      </div>
+
+<script>
+  function openFullscreen(src) {
+    document.getElementById("fullscreenImgC").src = src;
+    document.getElementById("fullscreen").style.display = "flex";
+  }
+
+  function closeFullscreen() {
+    document.getElementById("fullscreen").style.display = "none";
+  }
+</script>
+
+
+    </section>
+  </main>
+
+  <a href="index.html">Back to Home</a>
+
+    <footer>
+    <p>&copy; 2025 Anatomy & Physiology Hub. All rights reserved.</p>
+  </footer>
+</body>
+</html>
