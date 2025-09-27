@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anatomy & Physiology Hub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: #1e293b;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #334155;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0.5rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    footer {
+      background: #1e293b;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .card {
+      background: #f1f5f9;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-left: 5px solid #0ea5e9;
+    }
+    .card img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Accordion Styles (from H5P-style code) */
+    :root{
+      --bg:#f7f8fb;
+      --card:#ffffff;
+      --accent:#3b82f6;
+      --muted:#6b7280;
+      --radius:12px;
+      --gap:12px;
+      --shadow: 0 6px 18px rgba(15,23,42,0.06);
+    }
+
+    .accordion{
+      max-width:900px;
+      margin:2rem auto;
+      display:grid;
+      gap:var(--gap);
+    }
+    .accordion-item{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:visible;
+      border:1px solid rgba(15,23,42,0.04);
+    }
+    .accordion-toggle{
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:16px 18px;
+      background:transparent;
+      border:0;
+      cursor:pointer;
+      font-size:1rem;
+      text-align:left;
+      border-radius:inherit;
+    }
+    .accordion-toggle:focus{
+      outline:3px solid rgba(59,130,246,0.18);
+      outline-offset:2px;
+    }
+    .accordion-title{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .badge{
+      background:var(--accent);
+      color:white;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:0.8rem;
+    }
+    .accordion-icon{
+      width:36px;height:36px;
+      display:inline-grid;place-items:center;
+      border-radius:8px;
+      border:1px solid rgba(15,23,42,0.06);
+      background:linear-gradient(180deg,rgba(255,255,255,0.6),transparent);
+      margin-left:auto;
+      transform-origin:center;
+      transition:transform .28s cubic-bezier(.2,.9,.2,1);
+    }
+    .accordion-item[aria-expanded="true"] .accordion-icon{ transform:rotate(180deg) }
+    .accordion-content{
+      overflow:hidden;
+      max-height:0;
+      transition: max-height 300ms ease-in-out, padding 200ms ease-in-out;
+      padding:0 18px;
+    }
+    .accordion-content-inner{
+      padding:12px 0 18px 0;
+      color:var(--muted);
+      line-height:1.5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hub-A&P</h1>
+    <h2>Welcome to the Anatomy & Physiology Hub!</h2>
+    <p>Your destination for interactive and engaging A&P learning</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="learn.html">Learn</a>
+    <a href="resources.html">Resources</a>
+    <a href="#tools">Tools</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <a href="QRman.html">QR-man</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>Hello! I'm BB, a university-level anatomy lecturer. This site supports learners with structured content, tools, and resources to master anatomy and physiology.</p>
+    </section>
+
+    <!-- Accordion Section Inserted Here -->
+    <section id="accordion-section">
+      <h2>Quick Topics</h2>
+      <div class="accordion" data-single-open="true">
+        <section class="accordion-item" aria-expanded="false">
+          <button class="accordion-toggle" aria-controls="panel-1" id="toggle-1">
+            <span class="accordion-title"><strong>What is Anatomy?</strong></span>
+            <span class="accordion-icon" aria-hidden="true">▾</span>
+          </button>
+          <div class="accordion-content" id="panel-1" role="region" aria-labelledby="toggle-1">
+            <div class="accordion-content-inner">
+              Anatomy is the study of body structure and the relationships between different parts of the body.
+            </div>
+          </div>
+        </section>
+
+        <section class="accordion-item" aria-expanded="false">
+          <button class="accordion-toggle" aria-controls="panel-2" id="toggle-2">
+            <span class="accordion-title"><strong>What is Physiology?</strong></span>
+            <span class="accordion-icon" aria-hidden="true">▾</span>
+          </button>
+          <div class="accordion-content" id="panel-2" role="region" aria-labelledby="toggle-2">
+            <div class="accordion-content-inner">
+              Physiology focuses on how the body works — including functions of cells, tissues, and organs.
+            </div>
+          </div>
+        </section>
+
+        <section class="accordion-item" aria-expanded="false">
+          <button class="accordion-toggle" aria-controls="panel-3" id="toggle-3">
+            <span class="accordion-title"><strong>Why Study A&P?</strong></span>
+            <span class="accordion-icon" aria-hidden="true">▾</span>
+          </button>
+          <div class="accordion-content" id="panel-3" role="region" aria-labelledby="toggle-3">
+            <div class="accordion-content-inner">
+              Understanding A&P forms the foundation of all health sciences and clinical practice.
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="learn">
+      <h2>Learning Modules</h2>
+      <div class="card">
+        <h3>Upper Limb Anatomy</h3>
+        <p>Learn musculoskeletal anatomy of the upper limb, along with innervations and clinical applications</p>
+      </div>
+      <div class="card">
+        <h3>Cardiovascular Physiology</h3>
+        <p>Explore how the heart and vessels function, with clinical examples.</p>
+      </div>
+      <div class="card">
+        <h3>Histology Basics</h3>
+        <p>Understand tissue structure through histological images and annotations.</p>
+      </div>
+    </section>
+
+    <section id="resources">
+      <h2>Resource Library</h2>
+      <ul>
+        <li><a href="#">Lecture Slides</a></li>
+        <li><a href="#">Revision Handouts</a></li>
+        <li><a href="#">Spotter Practice Sheets</a></li>
+        <li><a href="#">Clinical Scenarios</a></li>
+      </ul>
+    </section>
+
+    <section id="tools">
+      <h2>Interactive Tools</h2>
+      <ul>
+        <li><a href="#">Anatomy Flashcards</a></li>
+        <li><a href="#">Quiz Builder</a></li>
+        <li><a href="#">Label the Diagram</a></li>
+        <li><a href="#">Mini-Games</a></li>
+      </ul>
+    </section>
+
+    <section id="blog">
+      <h2>Blog</h2>
+      <div class="card">
+        <h3>Using H5P to Enhance Student Engagement</h3>
+        <p>A short overview of how I use H5P to promote self-paced revision and interactivity.</p>
+      </div>
+      <div class="card">
+        <h3>Common Mistakes in Spotter Exams</h3>
+        <p>Insights from teaching: what students miss and how to improve performance.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Get in touch via <a href="mailto:#">Dont get in touch with me</a> or follow me on <a href="#">LinkedIn</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Anatomy & Physiology Hub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Basic accordion JS
+    document.querySelectorAll('.accordion-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.closest('.accordion-item');
+        const panel = document.getElementById(button.getAttribute('aria-controls'));
+        const isOpen = item.getAttribute('aria-expanded') === 'true';
+        if (isOpen){
+          item.setAttribute('aria-expanded','false');
+          panel.style.maxHeight = 0;
+        } else {
+          document.querySelectorAll('.accordion-item[aria-expanded="true"]').forEach(openItem => {
+            openItem.setAttribute('aria-expanded','false');
+            const openPanel = document.getElementById(openItem.querySelector('.accordion-toggle').getAttribute('aria-controls'));
+            openPanel.style.maxHeight = 0;
+          });
+          item.setAttribute('aria-expanded','true');
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
